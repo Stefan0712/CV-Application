@@ -1,0 +1,111 @@
+h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section{
+    border: 1px black solid;
+    border-radius: 10px;
+    height: 350px;
+    width: 600px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 20px;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.saveStatus{
+    font-size: 10px;
+    width: 400px;
+    text-align: center;
+    grid-column: 1/3;
+}
+.section input{
+    height: 30px;
+    width: 400px;
+    border-radius: 10px;
+    grid-column: 2 /2;
+}
+.section label{
+    grid-column: 1 / 1;
+}
+.btn{
+    height: 50px;
+    width: 200px;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 20px;
+    grid-column: 1 / 3;
+}
+#root{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.dates{
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+  
+}
+.dates input{
+    width: 100px;
+}
+.dates div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dates div label{
+    margin-right: 10px;
+}
+.saveBtn{
+    align-self: center;
+    width: 300px;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.viewSection{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 250px;
+    padding: 20px;
+    
+}
+.viewSection h1{
+    text-align: left;
+    margin: 10px;
+    padding: 0px;
+}
+.viewSection div{
+    margin-bottom: 15px;
+    background-color: rgba(235, 233, 233, 0.5);
+    padding: 20px;
+}
+.viewCV{
+    background-color: rgba(133, 127, 127, 0.3);
+    width: 800px;
+    padding: 25px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
