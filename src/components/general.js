@@ -50,11 +50,11 @@ class General extends React.Component{
                 <Save saveStatus={this.state.isSaved}/>
                 </div>
                 <label>Full name</label>
-                <input id='name' type='text' onChange={this.setName} value={this.state.name} placeholder={this.state.name}/>
+                <input id='name' type='text' onChange={this.setName} placeholder={this.state.name}/>
                 <label>Email address</label>
-                <input id='email' type='text' onChange={this.setEmail} value={this.state.email} placeholder={this.state.email}/>
+                <input id='email' type='text' onChange={this.setEmail} placeholder={this.state.email}/>
                 <label>Phone number</label>
-                <input id='phone' type='text' onChange={this.setPhone} value={this.state.phone} placeholder={this.state.phone}/>
+                <input id='phone' type='text' onChange={this.setPhone} placeholder={this.state.phone}/>
 
                 <button type='submit' className='submitBtn btn' onClick={this.onTrigger}>Submit</button>
             </form>
