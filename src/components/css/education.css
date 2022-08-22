@@ -1,0 +1,93 @@
+.education-body{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.education-body label{
+    width: 150px;
+}
+.university-section{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.unviersity-name{
+    display: flex;
+}
+.unviersity-period{
+    display: flex;
+    align-items: center;
+}
+.unviersity-period label{
+    width: 100px;
+    margin-left: 25px;
+}
+.unviersity-period input{
+    width: 100px;
+}
+
+.highschool-section{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.highschool-name{
+    display: flex;
+}
+.highschool-period{
+    display: flex;
+    align-items: center;
+}
+.highschool-period label{
+    width: 100px;
+    margin-left: 25px;
+}
+.highschool-period input{
+    width: 100px;
+}
+
+.lang-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.lang-lvl{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.lang-lvl select{
+    background-color: lightgray;
+    margin-left: 10px;
+    border-radius: 5px;
+    height: 20px;
+    width: 40px;
+}
+
+.comp-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-comp-body{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.education-body button{
+    width: 200px;
+    height: 30px;
+    align-self: center;
+    margin: 20px 0px;
+    border-radius: 10px;
+}
+.education-body button:hover{
+    background-color: lightgray;
+    border: 1px solid gray;
+}
+

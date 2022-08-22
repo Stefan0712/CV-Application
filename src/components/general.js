@@ -1,70 +1,69 @@
-import { render } from '@testing-library/react'
-import React from 'react'
+import './css/general.css'
 
+const General = () => {
+    return ( 
+    <div className="general-body">
+        <div className="personal-details">
+            <h2>General info</h2>
+             <div className="name">
+                <label>Name</label>
+                <input type="text" placeholder="Name"></input>
+            </div>
+            <div className="last-name">
+                <label>Last name</label>
+                <input type="text" placeholder="Last name"></input>
+            </div>
+            <div className="adress">
+                <div className='inputs'>
+                    <div className='country'>
+                        <label>Country</label>
+                        <input id="country" type="text" placeholder="Country"></input>
+                    </div>
+                    <div className='city'>
+                        <label>City</label>
+                        <input id="city" type="text" placeholder="City"></input>
+                    </div>
+                    
+                    <div className='streetName'>
+                        <label>Street</label>
+                        <input id="street-name" type="text" placeholder="Street"></input>
+                    </div>
 
-class General extends React.Component{
-    constructor(props){
-    super(props)
-        this.state = {
-            name: props.data.name,
-            email: props.data.email,
-            phone: props.data.phone,
-            isSaved: false
-        }
-        this.handleSubmit = this.handleSubmit.bind(this)
-        this.setName = this.setName.bind(this)
-        this.setEmail = this.setEmail.bind(this)
-        this.setPhone = this.setPhone.bind(this)
+                    <div className='streetNr'>
+                        <label>Nr</label>
+                        <input id="street-nr" type="number" placeholder="nr"></input>
+                    </div>
 
-    }
-    
-    handleSubmit(event){
-        this.setState({isSaved: true})
-        setTimeout(()=>{
-            this.setState({isSaved: false});
-        },1500)
-        
-        event.preventDefault();
-    }
-
-    setName(event){
-        this.setState({name: event.target.value})
-    }
-    setEmail(event){
-        this.setState({email: event.target.value})
-    }
-    setPhone(event){
-        this.setState({phone: event.target.value})
-    }
-    onTrigger = () =>{
-        this.props.parentCallback(this.state)
-
-    }
-  
-    
-    render(){
-        
-        return (
-            <form className="section" onSubmit={this.handleSubmit}>
-                <div className="saveStatus">
-                <Save saveStatus={this.state.isSaved}/>
                 </div>
-                <label>Full name</label>
-                <input id='name' type='text' onChange={this.setName} placeholder={this.state.name}/>
-                <label>Email address</label>
-                <input id='email' type='text' onChange={this.setEmail} placeholder={this.state.email}/>
-                <label>Phone number</label>
-                <input id='phone' type='text' onChange={this.setPhone} placeholder={this.state.phone}/>
 
-                <button type='submit' className='submitBtn btn' onClick={this.onTrigger}>Submit</button>
-            </form>
-        )
-    }
-}
-function Save(props){
-    if (props.saveStatus===false) {
-        return (<h2>Hit "Submit" to save</h2>)
-    }else if(props.saveStatus===true){return (<h2>Saved!</h2>)}
+            </div>
+        </div>
+        <div className="contact-info">
+            <h2> Contact info</h2>
+            <div className="email">
+                <label>Email</label>
+                <input type="email" placeholder="email@example.com"></input>
+            </div>
+            <div className="phone">
+                <label>Phone</label>
+                <input type="number" placeholder="Phone number"></input>
+            </div>
+            <div className="fax">
+                <label>Fax</label>
+                <input type="number" placeholder="Name"></input>
+            </div>
+        </div>
+
+
+
+    </div>
     
-} 
+    
+    
+    
+    
+    
+    );
+}
+ 
 export default General;

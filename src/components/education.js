@@ -1,63 +1,103 @@
-import React from 'react';
+import './css/education.css'
 
 
-class Education extends React.Component{
-    constructor(props){
-        super(props);
+const Education = () => {
+    return ( 
 
-        this.state = {
-            schoolName: props.data.schoolName,
-            titleOfStudy: props.data.titleOfStudy,
-            dateOfStudy: props.data.dateOfStudy,
-            isSaved: false
-
-        }
-        this.setName = this.setName.bind(this)
-        this.setTitle = this.setTitle.bind(this)
-        this.setDate = this.setDate.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
-    }
-    handleSubmit(event){
-        this.setState({isSaved: true})
-        setTimeout(()=>{
-            this.setState({isSaved: false});
-        },1500)
-        event.preventDefault();
-    }
-    setTitle(event){
-        this.setState({titleOfStudy: event.target.value})
-    }
-    setDate(event){
-        this.setState({dateOfStudy: event.target.value})
-    }
-    setName(event){
-        this.setState({schoolName: event.target.value})
-    }
-    onTrigger = () =>{
-        this.props.parentCallback(this.state)
-    }
-    render(){
-        return (
-            <form className='section' onSubmit={this.handleSubmit}>
-                <div className="saveStatus">
-                    <Save saveStatus={this.state.isSaved}/>
+        <div className="education-body">
+            <div className="university-section">
+                <div className="unviersity-name">
+                    <label>University name</label>
+                    <input type="text"></input>
                 </div>
-                <label>School name</label>
-                <input id='schoolName' type='text' onChange={this.setName} placeholder={this.state.schoolName}/>
-                <label>Title of study</label>
-                <input id='schoolName' type='text' onChange={this.setTitle} placeholder={this.state.titleOfStudy}/>
-                <label>Date of study</label>
-                <input id='schoolName' type='text' onChange={this.setDate} placeholder={this.state.dateOfStudy}/>
-                <button type='submit' className='btn' onClick={this.handleSubmit} onClick={this.onTrigger}>Submit</button>
-                
-            </form>
-        )
-    }
+                <div className="unviersity-period">
+                    <label>From</label>
+                    <input type="number"></input>
+              
+                    <label>To</label>
+                    <input type="number"></input>
+                </div>
+            </div>
+            <div className="highschool-section">
+                <div className="highschool-name">
+                    <label>Highschool name</label>
+                    <input type="text"></input>
+                </div>
+                <div className="highschool-period">
+                    <label>From</label>
+                    <input type="number"></input>
+              
+                    <label>To</label>
+                    <input type="number"></input>
+                </div>
+            </div>
+
+
+            <div className="lang-section">
+                <button>Add a language</button>
+                <div className="add-lang-body">
+                    <input placeholder="English"></input>
+                    <div className="lang-lvl">
+                        <div className="speak-lvl">
+                            Speak level:
+                            <select defaultValue="A1">
+                            <option value="A1">A1</option>
+                            <option value="A2">A2</option>
+                            <option value="B1">B1</option>
+                            <option value="B2">B2</option>
+                            <option value="C1">C1</option>
+                            <option value="C2">C2</option>
+                        </select>
+
+                        </div>
+                        <div className="write-lvl">
+                            Write level:
+                            <select defaultValue="A1">
+                            <option value="A1">A1</option>
+                            <option value="A2">A2</option>
+                            <option value="B1">B1</option>
+                            <option value="B2">B2</option>
+                            <option value="C1">C1</option>
+                            <option value="C2">C2</option>
+                        </select>
+
+                        </div>
+                        <div className="understand-lvl">
+                            Understand level:
+                            <select defaultValue="A1">
+                            <option value="A1">A1</option>
+                            <option value="A2">A2</option>
+                            <option value="B1">B1</option>
+                            <option value="B2">B2</option>
+                            <option value="C1">C1</option>
+                            <option value="C2">C2</option>
+                        </select>
+
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div className="comp-section">
+                <button>Add a comp</button>
+                <div className="add-comp-body">
+
+                        <input placeholder="Comp name"></input>
+                        <input placeholder="Issuer"></input>
+                        <input placeholder="Issue date"></input>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+     );
 }
-function Save(props){
-    if (props.saveStatus===false) {
-        return (<h2>Hit "Submit" to save</h2>)
-    }else if(props.saveStatus===true){return (<h2>Saved!</h2>)}
-    
-} 
+ 
 export default Education;

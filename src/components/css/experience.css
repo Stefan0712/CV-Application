@@ -1,0 +1,54 @@
+.experience-body{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.job-section{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.job-name{
+    display: flex;
+}
+.job-period{
+    display: flex;
+    align-items: center;
+}
+.job-period label{
+    width: 100px;
+    margin-left: 25px;
+}
+.job-period input{
+    width: 100px;
+}
+
+
+
+.skill-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-skill-body{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.experience-body button{
+    width: 200px;
+    height: 30px;
+    align-self: center;
+    margin: 20px 0px;
+    border-radius: 10px;
+}
+.experience-body button:hover{
+    background-color: lightgray;
+    border: 1px solid gray;
+}
+

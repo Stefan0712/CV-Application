@@ -1,0 +1,87 @@
+.general-body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+.personal-details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    gap: 10px;
+
+}
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+
+label{
+    font-size: 20px;
+    font-weight: lighter;
+    
+}
+.name,
+.last-name{
+    display: flex;
+}
+.name{
+    padding-left: 0px;
+}
+label{
+    width: 100px;
+}
+
+input{
+    border: 1px solid lightgray;
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+.adress{
+    display: flex;
+    flex-direction: column;
+}
+.adress .inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
+}
+.adress .inputs div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+#country{
+    width: 200px;
+    
+}
+#city{
+    width: 150px;
+    
+}
+#street-nr{
+    width: 50px;
+    
+}
+#street-name{
+    width: 150px;
+    
+}
+.email,
+.phone,
+.fax{
+    display: flex;
+}
+.contact-info{
+    gap: 10px;
+}
+

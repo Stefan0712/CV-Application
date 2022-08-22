@@ -1,0 +1,43 @@
+*{
+    border: 0px;
+    margin: 0px;
+}
+
+.app-body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cv-body{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+nav{
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+.nav-name{
+    margin-left: 25px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.links{
+    margin-left: auto;
+    margin-right: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+}
+.links button{
+    width: 100px;
+    height: 50px;
+    background-color: white;
+}
+.links button:hover{
+    background-color: rgba(211, 211, 211, 0.37);
+}
