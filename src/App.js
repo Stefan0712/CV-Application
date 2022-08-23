@@ -5,6 +5,20 @@ import Experience from './components/experience';
 import './app.css'
 
 const App = () => {
+
+
+
+
+  const getGeneral = (generalInfo) =>{
+    console.log(generalInfo)
+  }
+  const getEducation = (educationInfo) =>{
+    console.log(educationInfo)
+  }
+  const getExperience = (experienceInfo) =>{
+    console.log(experienceInfo)
+  }
+
   return ( 
   <div className='app-body'>
     <nav>
@@ -17,9 +31,9 @@ const App = () => {
       </div>
     </nav>
     <div className='cv-body'>
-        <General />
-        <Education />
-        <Experience />
+        <General getGeneral={getGeneral} />
+        <Education getEducation={getEducation} />
+        <Experience getExperience={getExperience} />
     </div> 
   </div>
   );
