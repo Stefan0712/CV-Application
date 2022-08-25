@@ -1,9 +1,15 @@
 *{
+    padding: 0px;
+    margin: 0px;
     border: 0px;
+}
+#root{
+    padding: 0px;
     margin: 0px;
 }
-
 .app-body{
+    border: 0px;
+    margin: 0px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -14,11 +20,13 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    width: 75%;
 }
 nav{
-    width: 100%;
+    width: 100vw;
     height: 50px;
     display: flex;
+    box-shadow: 0px 2px 3px lightgray;
 }
 .nav-name{
     margin-left: 25px;
@@ -37,6 +45,7 @@ nav{
     width: 100px;
     height: 50px;
     background-color: white;
+
 }
 .links button:hover{
     background-color: rgba(211, 211, 211, 0.37);
@@ -52,3 +61,78 @@ nav{
     background-color: rgba(243, 241, 241, 0.363);
     border: 1px solid lightgray
 }
+.cv-body-menu{
+    height: 50px;
+    width: 95%;
+    position: sticky;
+    margin-top: 10px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 10px;
+    
+}
+#cv-name{
+    margin-left: 25px;
+    border-radius: 5px;
+}
+#save-cv-btn{
+    margin-left: auto;
+    margin-right: 25px;
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: white;
+    border:1px solid lightgray;
+
+}
+#save-cv-btn:hover{
+    background-color: rgba(211, 211, 211, 0.699);
+    border: 1px solid gray;
+}
+.savedCVs{
+    height: 90%;
+    position: absolute;
+    top: 75px;
+    right: 5px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+
+.cv-preview{
+    width: calc(100% - 20px);
+    background-color: rgba(211, 211, 211, 0.452);
+    height: 50px;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 1fr 1fr;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+#delete-cv-btn{
+    grid-column:  2 / 3;
+    grid-row: 1 / 3;
+    margin-right: 10px;
+    height: 25px;
+    width: 60px;
+    align-self: center;
+    background-color: rgb(248, 70, 70);
+    color: white;
+    border-radius: 5px;
+}
+.cv-preview .name{
+    font-size: 20px;
+}
+
+.hidden{
+    display: none;
+}
+
